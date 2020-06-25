@@ -26,7 +26,8 @@ img {
     height: 5rem;
     border-radius: 50%;
     display: block;
-    margin: 0 auto; /* margin auto can't work if we don't use "display: block;" because images self inline displayed." */
+    margin: 0 auto;
+    /* margin auto can't work if we don't use "display: block;" because images self inline displayed." */
 }
 
 img:hover {
@@ -41,6 +42,10 @@ h2 {
     position: relative;
     top: 0.3em;
     color: #543A43;
+    animation-name: leftright;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in;
 }
 
 h3 {
@@ -95,7 +100,8 @@ footer {
     position: relative;
 }
 
-@keyframes rainbow { /* We should use animation after list. If we don't list can't be seen. */
+@keyframes rainbow {
+    /* We should use animation after list. If we don't list can't be seen. */
     0% {
         background-color: #FE9A86;
     }
@@ -104,43 +110,66 @@ footer {
     }
     100% {
         background-color: #6F4867;
-    }}
-    .header-menu li:hover {
-        background-color: #FEAA99;
     }
-    a {
-        color: #543A43;
-        font-weight: bold;
+}
+
+@keyframes leftright {
+    0% {
+        left: 0%;
     }
-    a:link {
-        color: #FE9A86;
-        text-decoration: none;
+    50% {
+        left: 50%;
+        opacity: 0.1;
     }
-    a:hover {
-        color: #FDFFFC;
+    100% {
+        left: 0%;
     }
-    #left {
-        float: left;
-        width: 44%;
-        color: #FDFFFC;
-        text-align: center;
-    }
-    #right {
-        float: right;
-        width: 50%;
-        color: #FDFFFC;
-        margin-left: 5%;
-    }
-    #left p {
-        text-align: center;
-    }
-    #right p {
-        text-align: center;
-    }
-    #left:hover {
-        transform: scale(1.2);
-    }
-    #right:hover {
-        transform: scale(1.2);
-    }
-    
+}
+
+.header-menu li:hover {
+    background-color: #FEAA99;
+}
+
+a {
+    color: #543A43;
+    font-weight: bold;
+}
+
+a:link {
+    color: #FE9A86;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FDFFFC;
+}
+
+#left {
+    float: left;
+    width: 44%;
+    color: #FDFFFC;
+    text-align: center;
+}
+
+#right {
+    float: right;
+    width: 50%;
+    color: #FDFFFC;
+    margin-left: 5%;
+}
+
+#left p {
+    text-align: center;
+}
+
+#right p {
+    text-align: center;
+}
+
+#left:hover {
+    transform: scale(1.2);
+}
+
+#right:hover {
+    transform: scale(1.2);
+}
