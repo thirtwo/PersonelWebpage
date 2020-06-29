@@ -21,7 +21,7 @@ main {
     margin: 0 10%;
 }
 
-img {
+#mainimg {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -30,7 +30,7 @@ img {
     /* margin auto can't work if we don't use "display: block;" because images self inline displayed." */
 }
 
-img:hover {
+#mainimg:hover {
     transform: rotate(20deg) scale(1.3);
 }
 
@@ -43,8 +43,8 @@ h2 {
     top: 0.3em;
     color: #543A43;
     animation-name: leftright;
-    animation-duration: 3s;
-    animation-iteration-count: 2;
+    animation-duration: 8s;
+    animation-iteration-count: initial;
     animation-timing-function: ease-in;
 }
 
@@ -99,6 +99,14 @@ footer {
     font-weight: 1000;
     position: relative;
 }
+@media (max-width: 500px) { 
+    .header-menu li{
+        padding:0.5% 7%; 
+    } 
+.header-menu{
+    padding: 0.2em 3em;
+}}
+
 
 @keyframes rainbow {
     /* We should use animation after list. If we don't list can't be seen. */
@@ -117,11 +125,14 @@ footer {
     0% {
         left: 0%;
     }
-    50% {
+    33% {
         left: 50%;
         opacity: 0.1;
     }
-    100% {
+    66%{
+        left: -50%;
+    }
+    100%{
         left: 0%;
     }
 }
